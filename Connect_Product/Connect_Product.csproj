@@ -50,6 +50,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmProcedure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcedure.Designer.cs">
+      <DependentUpon>frmProcedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLi.Designer.cs">
+      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThuTuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThuTuc.Designer.cs">
+      <DependentUpon>frmThuTuc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmView.Designer.cs">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +82,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmProcedure.resx">
+      <DependentUpon>frmProcedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLi.resx">
+      <DependentUpon>frmQuanLi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThuTuc.resx">
+      <DependentUpon>frmThuTuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmView.resx">
+      <DependentUpon>frmView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSanPham.resx">
       <DependentUpon>frmSanPham.cs</DependentUpon>
     </EmbeddedResource>
