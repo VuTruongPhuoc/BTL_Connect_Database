@@ -31,7 +31,6 @@ namespace Connect_Product
 
             try
             {
-                //mở chuỗi kết nối
                 conn.Open();
                 //khai báo đối tượng SqlCommand trong SqlDataAdapter
                 da.SelectCommand = new SqlCommand();
@@ -86,16 +85,21 @@ namespace Connect_Product
         }
         public bool KiemTraThongTin()
         {
-            if (txtMaSP.TextLength == 0) { MessageBox.Show("Vui lòng nhập Mã SP !", "Thông báo"); return false; }
-            else if (txtTenSP.TextLength == 0) { MessageBox.Show("Vui lòng nhập Tên SP !", "Thông báo"); return false; }
-            else if (cboMaHSX.SelectedIndex == -1) { MessageBox.Show("Vui lòng nhập Thương Hiệu SX !", "Thông báo"); return false; }
-            else if (txtKichThuoc.TextLength == 0) { MessageBox.Show("Vui lòng nhập Kích Thước SP !", "Thông báo"); return false; }
-            else if (txtPhanGiai.TextLength == 0) { MessageBox.Show("Vui lòng nhập Độ Phân Giải !", "Thông báo"); return false; }
-            else if (txtManHinh.TextLength == 0) { MessageBox.Show("Vui lòng nhập kích thước Mành Hình !", "Thông báo"); return false; }
-            else if (numSoLuong.Value == 0) { MessageBox.Show("Vui Lòng Nhập Số Lượng của SP", "Thông báo"); return false; }
-            else if (txtDonGiaNhap.TextLength == 0) { MessageBox.Show("Vui lòng nhập Đơn Giá Nhập của SP"); return false; }
-            else if (txtDonGiaBan.TextLength == 0) { MessageBox.Show("Vui lòng nhập Đơn Giá Bán của SP"); return false; }
-            else if (txtBaoHanh.TextLength == 0) { MessageBox.Show("Vui lòng nhập Thời gian bảo hành của SP"); return false; }
+            try
+            {
+                if (txtMaSP.TextLength == 0) { MessageBox.Show("Vui lòng nhập Mã SP !", "Thông báo"); return false; }
+                else if (txtTenSP.TextLength == 0) { MessageBox.Show("Vui lòng nhập Tên SP !", "Thông báo"); return false; }
+                else if (cboMaHSX.SelectedIndex == -1) { MessageBox.Show("Vui lòng nhập Thương Hiệu SX !", "Thông báo"); return false; }
+                else if (txtKichThuoc.TextLength == 0) { MessageBox.Show("Vui lòng nhập Kích Thước SP !", "Thông báo"); return false; }
+                else if (txtPhanGiai.TextLength == 0) { MessageBox.Show("Vui lòng nhập Độ Phân Giải !", "Thông báo"); return false; }
+                else if (txtManHinh.TextLength == 0) { MessageBox.Show("Vui lòng nhập kích thước Mành Hình !", "Thông báo"); return false; }
+                else if (numSoLuong.Value == 0) { MessageBox.Show("Vui Lòng Nhập Số Lượng của SP", "Thông báo"); return false; }
+                else if (txtDonGiaNhap.TextLength == 0) { MessageBox.Show("Vui lòng nhập Đơn Giá Nhập của SP"); return false; }
+                else if (txtDonGiaBan.TextLength == 0) { MessageBox.Show("Vui lòng nhập Đơn Giá Bán của SP"); return false; }
+                else if (txtBaoHanh.TextLength == 0) { MessageBox.Show("Vui lòng nhập Thời gian bảo hành của SP"); return false; }
+            }
+            catch { }
+           
             return true;
         }
 
