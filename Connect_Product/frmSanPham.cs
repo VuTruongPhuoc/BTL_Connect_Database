@@ -58,23 +58,16 @@ namespace Connect_Product
             SqlDataAdapter da = new SqlDataAdapter();
             DataTable dt = new DataTable();
 
-            //lấy chuỗi kết nối từ file App.config
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
             try
             {
-                //mở chuỗi kết nối
                 conn.Open();
-                //khai báo đối tượng SqlCommand trong SqlDataAdapter
                 da.SelectCommand = new SqlCommand();
-                //gọi thủ tục từ SQL
                 da.SelectCommand.CommandText = "SP_HienThiTH";
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                //gán chuỗi kết nối
                 da.SelectCommand.Connection = conn;
-                //sử dụng phương thức fill để điền dữ liệu từ datatable vào SqlDataAdapter
                 da.Fill(dt);
-                //gán dữ liệu từ datatable vào datagridview
                 conn.Close();
             }
             catch (Exception ex)
